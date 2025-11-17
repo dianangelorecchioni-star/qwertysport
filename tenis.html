@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenis - QWERTY SPORT</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Moderno -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <i class="fas fa-table-tennis"></i>
+        <span>QWERTY SPORT</span>
+      </div>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="index.html#deportes" class="nav-link">Deportes</a>
+        <a href="#productosGrid" class="nav-link">Tienda</a>
+        <a href="index.html#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cartBtn">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </button>
+        <button id="loginBtn" class="login-btn">
+          <i class="fas fa-user"></i>
+          <span>Iniciar Sesión</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section del Tenis -->
+  <section class="deporte-hero">
+    <div class="deporte-hero-bg" style="background-image: url('tenis/tenis1.jpg');">
+      <div class="deporte-hero-overlay">
+        <div class="container">
+          <div class="deporte-hero-content">
+            <div class="deporte-hero-icon">
+              <i class="fas fa-table-tennis"></i>
+            </div>
+            <h1 class="deporte-hero-title">Tenis</h1>
+            <p class="deporte-hero-subtitle">
+              El deporte de la raqueta que combina elegancia, precisión y estrategia. 
+              Descubre el equipamiento que necesitas para dominar la cancha.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navegación de Deportes -->
+  <section class="deportes-nav">
+    <div class="container">
+      <div class="deportes-nav-grid">
+        <a href="futbol.html" class="deporte-nav-card">
+          <div class="deporte-nav-icon">
+            <i class="fas fa-futbol"></i>
+          </div>
+          <span>Fútbol</span>
+        </a>
+        <a href="basquet.html" class="deporte-nav-card">
+          <div class="deporte-nav-icon">
+            <i class="fas fa-basketball-ball"></i>
+          </div>
+          <span>Básquet</span>
+        </a>
+        <a href="tenis.html" class="deporte-nav-card active">
+          <div class="deporte-nav-icon">
+            <i class="fas fa-table-tennis"></i>
+          </div>
+          <span>Tenis</span>
+        </a>
+        <a href="natacion.html" class="deporte-nav-card">
+          <div class="deporte-nav-icon">
+            <i class="fas fa-swimming-pool"></i>
+          </div>
+          <span>Natación</span>
+        </a>
+        <a href="voley.html" class="deporte-nav-card">
+          <div class="deporte-nav-icon">
+            <i class="fas fa-volleyball-ball"></i>
+          </div>
+          <span>Voley</span>
+        </a>
+        <a href="boxeo.html" class="deporte-nav-card">
+          <div class="deporte-nav-icon">
+            <i class="fas fa-hand-rock"></i>
+          </div>
+          <span>Boxeo</span>
+        </a>
+        <a href="gimnasio.html" class="deporte-nav-card">
+          <div class="deporte-nav-icon">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <span>Gimnasio</span>
+        </a>
+        <a href="running.html" class="deporte-nav-card">
+          <div class="deporte-nav-icon">
+            <i class="fas fa-running"></i>
+          </div>
+          <span>Running</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería de Fotos -->
+  <section class="deporte-gallery">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="tenis/tenis1.WEBP" alt="Jugador de tenis">
+          <div class="gallery-overlay">
+            <h3>Servicio Perfecto</h3>
+            <p>Precisión y potencia en cada golpe</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="tenis/tenis2.WEBP" alt="Revés">
+          <div class="gallery-overlay">
+            <h3>Revés Elegante</h3>
+            <p>Técnica y control</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="tenis/tenis3.WEBP" alt="Volea">
+          <div class="gallery-overlay">
+            <h3>Volea de Campeón</h3>
+            <p>Reflejos y agilidad</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Productos del Deporte -->
+  <section class="deporte-productos">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Productos para Tenis</h2>
+        <p class="section-subtitle">Todo lo que necesitas para dominar la cancha</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filtros">
+        <div class="filtro-grupo">
+          <label>Categoría:</label>
+          <select id="categoriaFiltro">
+            <option value="">Todas</option>
+            <option value="remeras">Remeras</option>
+            <option value="pantalones">Pantalones</option>
+            <option value="zapatillas">Zapatillas</option>
+            <option value="shorts">Shorts</option>
+            <option value="buzos">Buzos</option>
+            <option value="equipamiento">Equipamiento</option>
+            <option value="accesorios">Accesorios</option>
+          </select>
+        </div>
+        
+        <div class="filtro-grupo">
+          <label>Precio:</label>
+          <select id="precioFiltro">
+            <option value="">Todos</option>
+            <option value="0-50">$0 - $25000</option>
+            <option value="50-100">$25000 - $50000</option>
+            <option value="100-200">$50000 - $100000</option>
+            <option value="200+">$100000+</option>
+          </select>
+        </div>
+
+        <button class="btn-filtro" onclick="aplicarFiltros()">
+          <i class="fas fa-filter"></i>
+          Aplicar Filtros
+        </button>
+      </div>
+
+      <!-- Buscador de Productos -->
+      <div class="buscador-productos">
+        <div class="buscador-container">
+          <i class="fas fa-search"></i>
+          <input type="text" id="buscadorProductos" placeholder="Buscar productos por nombre, categoría o deporte...">
+          <button class="btn-limpiar-busqueda" onclick="limpiarBusqueda()" style="display: none;">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid de Productos -->
+      <div class="productos-grid" id="productosGrid">
+        <!-- Los productos se cargarán dinámicamente -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="deporte-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>¿Listo para Dominar la Cancha?</h2>
+        <p>Comienza tu aventura en el tenis hoy mismo con el mejor equipamiento deportivo</p>
+        <div class="cta-buttons">
+          <a href="index.html#tienda" class="btn-primary">
+            <i class="fas fa-shopping-cart"></i>
+            Ver Todos los Productos
+          </a>
+          <a href="index.html" class="btn-secondary">
+            <i class="fas fa-home"></i>
+            Volver al Inicio
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>QWERTY SPORT</h3>
+          <p>Tu pasión, nuestro deporte. Ofrecemos la mejor calidad en ropa deportiva y equipamiento para atletas de todos los niveles.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Deportes</h4>
+          <ul>
+            <li><a href="futbol.html">Fútbol</a></li>
+            <li><a href="basquet.html">Básquet</a></li>
+            <li><a href="tenis.html">Tenis</a></li>
+            <li><a href="natacion.html">Natación</a></li>
+            <li><a href="voley.html">Voley</a></li>
+            <li><a href="boxeo.html">Boxeo</a></li>
+            <li><a href="gimnasio.html">Gimnasio</a></li>
+            <li><a href="running.html">Running</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Categorías</h4>
+          <ul>
+            <li><a href="index.html#tienda">Remeras</a></li>
+            <li><a href="index.html#tienda">Pantalones</a></li>
+            <li><a href="index.html#tienda">Zapatillas</a></li>
+            <li><a href="index.html#tienda">Shorts</a></li>
+            <li><a href="index.html#tienda">Buzos</a></li>
+            <li><a href="index.html#tienda">Equipamiento</a></li>
+            <li><a href="index.html#tienda">Accesorios</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="index.html#contacto">Ayuda</a></li>
+            <li><a href="index.html#contacto">Envíos</a></li>
+            <li><a href="index.html#contacto">Devoluciones</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 QWERTY SPORT. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Panel lateral del usuario -->
+  <div id="userPanel" class="user-panel">
+    <div class="user-header">
+      <div class="user-avatar">
+        <i class="fas fa-user"></i>
+      </div>
+      <h3 id="panelNombre">Usuario</h3>
+      <button class="close-panel" onclick="cerrarPanel()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="user-info">
+      <div class="info-item">
+        <label>Email:</label>
+        <span id="panelEmail">usuario@email.com</span>
+      </div>
+      <div class="info-item">
+        <label>Contraseña:</label>
+        <span id="panelPass">********</span>
+      </div>
+      
+      <div class="user-actions">
+        <button id="editUserBtn" class="btn-edit">
+          <i class="fas fa-edit"></i>
+          Editar Perfil
+        </button>
+        <button id="logoutBtn" class="btn-logout">
+          <i class="fas fa-sign-out-alt"></i>
+          Cerrar Sesión
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal confirmación logout -->
+  <div id="logoutModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-sign-out-alt"></i>
+        <h3>¿Cerrar Sesión?</h3>
+      </div>
+      <p>¿Estás seguro de que quieres cerrar tu sesión?</p>
+      <div class="modal-actions">
+        <button id="confirmLogout" class="btn-primary">Sí, Cerrar</button>
+        <button onclick="cerrarModal('logoutModal')" class="btn-secondary">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-user"></i>
+        <h2>Iniciar Sesión</h2>
+      </div>
+      
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginNombre">Nombre</label>
+          <input type="text" id="loginNombre" placeholder="Tu nombre" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="tu@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Contraseña</label>
+          <div class="password-container">
+            <input type="password" id="loginPassword" placeholder="Tu contraseña" required>
+            <span id="toggleLoginPass" class="toggle-pass">👁️</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <i class="fas fa-sign-in-alt"></i>
+          Ingresar
+        </button>
+      </form>
+      
+      <div class="modal-footer">
+        <p>¿No tienes cuenta? 
+          <button id="openRegister" class="linkBtn">Regístrate aquí</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Registro -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-user-plus"></i>
+        <h2>Crear Cuenta</h2>
+      </div>
+      
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="regNombre">Nombre</label>
+          <input type="text" id="regNombre" placeholder="Tu nombre completo" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="regEmail">Email (solo Gmail o Hotmail)</label>
+          <input type="email" id="regEmail" placeholder="ejemplo@gmail.com o ejemplo@hotmail.com" required>
+          <small class="form-help">Solo se permiten cuentas de Gmail o Hotmail/Outlook</small>
+          <div id="regEmailError" class="form-error" style="display: none;"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="regPassword">Contraseña</label>
+          <div class="password-container">
+            <input type="password" id="regPassword" placeholder="Mín. 6 caracteres, 1 mayúscula y 1 signo" required>
+            <span id="toggleRegPass" class="toggle-pass">👁️</span>
+          </div>
+          <small class="form-help">Mínimo 6 caracteres, máximo 14. Debe incluir al menos una mayúscula y un signo especial</small>
+          <div id="regPasswordError" class="form-error" style="display: none;"></div>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <i class="fas fa-user-plus"></i>
+          Crear Cuenta
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Editar Usuario -->
+  <div id="editUserModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-edit"></i>
+        <h2>Editar Perfil</h2>
+      </div>
+      
+      <form id="editUserForm">
+        <div class="form-group">
+          <label for="editNombre">Nombre</label>
+          <input type="text" id="editNombre" placeholder="Tu nombre" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="editEmail">Email</label>
+          <input type="email" id="editEmail" placeholder="tu@email.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="editPassword">Contraseña</label>
+          <input type="password" id="editPassword" placeholder="Nueva contraseña" required>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <i class="fas fa-save"></i>
+          Guardar Cambios
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Carrito de Compras -->
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Carrito</h3>
+      <button class="close-cart" onclick="cerrarCarrito()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="cart-items" id="cartItems">
+      <!-- Los items del carrito se cargarán aquí -->
+    </div>
+    
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="btn-primary" onclick="checkout()">
+        <i class="fas fa-credit-card"></i>
+        Finalizar Compra
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal de Producto Detallado -->
+  <div id="productoModal" class="modal">
+    <!-- El contenido se cargará dinámicamente -->
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Cargar solo productos de tenis
+    document.addEventListener('DOMContentLoaded', function() {
+      const productosTenis = productos.filter(p => p.deporte === 'tenis' || p.deporte === 'general');
+      mostrarProductos(productosTenis);
+    });
+  </script>
+</body>
+</html>
+

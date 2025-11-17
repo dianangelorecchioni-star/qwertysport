@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QWERTY SPORT - Tu Pasión, Nuestro Deporte</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Moderno -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <i class="fas fa-dumbbell"></i>
+        <span>QWERTY SPORT</span>
+      </div>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav class="nav-menu" id="navMenu">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#deportes" class="nav-link">Deportes</a>
+        <a href="#tienda" class="nav-link">Tienda</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cartBtn">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </button>
+        <button id="loginBtn" class="login-btn">
+          <i class="fas fa-user"></i>
+          <span>Iniciar Sesión</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Barra de búsqueda -->
+  <div class="search-bar" id="searchBar">
+    <div class="search-container">
+      <input type="text" placeholder="Buscar productos, deportes, marcas..." id="searchInput">
+      <button class="search-submit">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="gradient-text">Tu Pasión</span>
+          <br>Nuestro Deporte
+        </h1>
+        <p class="hero-subtitle">
+          Descubre la mejor ropa deportiva y equipamiento para alcanzar tus metas. 
+          Desde principiantes hasta atletas profesionales.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="scrollToSection('deportes')">
+            Explorar Deportes
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <button class="btn-secondary" onclick="scrollToSection('tienda')">
+            Ver Tienda
+            <i class="fas fa-tshirt"></i>
+          </button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-cards">
+          <div class="floating-card card-1">
+            <i class="fas fa-futbol"></i>
+            <span>Fútbol</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fas fa-basketball-ball"></i>
+            <span>Básquet</span>
+          </div>
+          <div class="floating-card card-3">
+            <i class="fas fa-running"></i>
+            <span>Running</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- Sección de Deportes -->
+  <section class="deportes-section" id="deportes">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Deportes Destacados</h2>
+        <p class="section-subtitle">Encuentra todo lo que necesitas para tu deporte favorito</p>
+      </div>
+      
+      <div class="deportes-grid">
+        <!-- Fútbol -->
+        <div class="deporte-card" data-deporte="futbol" onclick="window.location.href='futbol.html'">
+          <div class="deporte-bg" style="background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="deporte-content">
+            <h3>Fútbol</h3>
+            <p>Pelotas, botines, camisetas, shorts y todo el equipamiento necesario</p>
+            <button class="deporte-btn">
+              Ver Productos
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Básquet -->
+        <div class="deporte-card" data-deporte="basquet" onclick="window.location.href='basquet.html'">
+          <div class="deporte-bg" style="background-image: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="deporte-content">
+            <h3>Básquet</h3>
+            <p>Zapatillas de alto rendimiento y ropa deportiva especializada</p>
+            <button class="deporte-btn">
+              Ver Productos
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tenis -->
+        <div class="deporte-card" data-deporte="tenis" onclick="window.location.href='tenis.html'">
+          <div class="deporte-bg" style="background-image: url('https://images.unsplash.com/photo-1554068865-24cecd4e34b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="deporte-content">
+            <h3>Tenis</h3>
+            <p>Raquetas, pelotas y ropa técnica para la cancha</p>
+            <button class="deporte-btn">
+              Ver Productos
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Natación -->
+        <div class="deporte-card" data-deporte="natacion" onclick="window.location.href='natacion.html'">
+          <div class="deporte-bg" style="background-image: url('https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="deporte-content">
+            <h3>Natación</h3>
+            <p>Trajes de baño, gafas y equipamiento acuático</p>
+            <button class="deporte-btn">
+              Ver Productos
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Voley -->
+        <div class="deporte-card" data-deporte="voley" onclick="window.location.href='voley.html'">
+          <div class="deporte-bg" style="background-image: url('https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="deporte-content">
+            <h3>Voley</h3>
+            <p>Pelotas, rodilleras y ropa deportiva para voley</p>
+            <button class="deporte-btn">
+              Ver Productos
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Boxeo -->
+        <div class="deporte-card" data-deporte="boxeo" onclick="window.location.href='boxeo.html'">
+          <div class="deporte-bg" style="background-image: url('https://images.unsplash.com/flagged/photo-1574005280900-3ff489fa1f70?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+          <div class="deporte-content">
+            <h3>Boxeo</h3>
+            <p>Guantes, vendas, sacos de boxeo y equipamiento de combate</p>
+            <button class="deporte-btn">
+              Ver Productos
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Gimnasio -->
+        <div class="deporte-card" data-deporte="gimnasio" onclick="window.location.href='gimnasio.html'">
+          <div class="deporte-bg" style="background-image: url('https://media.istockphoto.com/id/2192085190/es/foto/fitness-peso-muerto-y-hombre-en-el-gimnasio-en-un-entrenamiento-ejercicio-o-entrenamiento-de.jpg?s=612x612&w=0&k=20&c=AlDOgjKRDHc_3EzMsVmIH60lQU88dnsfHgwZKQ39A9g=');"></div>
+          <div class="deporte-content">>
+            <h3>Gimnasio</h3>
+            <p>Ropa de entrenamiento y accesorios para el gym</p>
+            <button class="deporte-btn">
+              Ver Productos
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Running -->
+        <div class="deporte-card" data-deporte="running" onclick="window.location.href='running.html'">
+          <div class="deporte-bg" style="background-image: url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="deporte-content">
+            <h3>Running</h3>
+            <p>Zapatillas de carrera y ropa de entrenamiento</p>
+            <button class="deporte-btn">
+              Ver Productos
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Tienda Deportiva -->
+  <section class="tienda-section" id="tienda">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Tienda Deportiva</h2>
+        <p class="section-subtitle">Todo lo que necesitas para tu rendimiento deportivo</p>
+      </div>
+
+      <!-- Categorías de Productos -->
+      <div class="categorias-grid">
+        <div class="categoria-card" onclick="filtrarPorCategoria('remeras')">
+          <div class="categoria-icon">
+            <i class="fas fa-tshirt"></i>
+          </div>
+          <h3>Remeras</h3>
+          <p>Camisetas deportivas de alta calidad para todos los deportes</p>
+        </div>
+
+        <div class="categoria-card" onclick="filtrarPorCategoria('pantalones')">
+          <div class="categoria-icon">
+            <i class="fas fa-socks"></i>
+          </div>
+          <h3>Pantalones</h3>
+          <p>Pantalones deportivos cómodos y funcionales</p>
+        </div>
+
+        <div class="categoria-card" onclick="filtrarPorCategoria('zapatillas')">
+          <div class="categoria-icon">
+            <i class="fas fa-shoe-prints"></i>
+          </div>
+          <h3>Zapatillas</h3>
+          <p>Calzado deportivo para máximo rendimiento</p>
+        </div>
+
+        <div class="categoria-card" onclick="filtrarPorCategoria('shorts')">
+          <div class="categoria-icon">
+            <i class="fas fa-running"></i>
+          </div>
+          <h3>Shorts</h3>
+          <p>Shorts deportivos ligeros y transpirables</p>
+        </div>
+
+        <div class="categoria-card" onclick="filtrarPorCategoria('buzos')">
+          <div class="categoria-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>Buzos</h3>
+          <p>Buzos deportivos para entrenamiento y competición</p>
+        </div>
+
+        <div class="categoria-card" onclick="filtrarPorCategoria('medias')">
+          <div class="categoria-icon">
+            <i class="fas fa-socks"></i>
+          </div>
+          <h3>Medias</h3>
+          <p>Medias deportivas especializadas</p>
+        </div>
+
+        <div class="categoria-card" onclick="filtrarPorCategoria('equipamiento')">
+          <div class="categoria-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Equipamiento</h3>
+          <p>Herramientas y accesorios deportivos</p>
+        </div>
+
+        <div class="categoria-card" onclick="filtrarPorCategoria('accesorios')">
+          <div class="categoria-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Accesorios</h3>
+          <p>Complementos para completar tu equipamiento</p>
+        </div>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filtros">
+        <div class="filtro-grupo">
+          <label>Categoría:</label>
+          <select id="categoriaFiltro">
+            <option value="">Todas</option>
+            <option value="remeras">Remeras</option>
+            <option value="pantalones">Pantalones</option>
+            <option value="zapatillas">Zapatillas</option>
+            <option value="shorts">Shorts</option>
+            <option value="buzos">Buzos</option>
+            <option value="medias">Medias</option>
+            <option value="equipamiento">Equipamiento</option>
+            <option value="accesorios">Accesorios</option>
+          </select>
+        </div>
+        
+        <div class="filtro-grupo">
+          <label>Deporte:</label>
+          <select id="deporteFiltro">
+            <option value="">Todos</option>
+            <option value="futbol">Fútbol</option>
+            <option value="basquet">Básquet</option>
+            <option value="tenis">Tenis</option>
+            <option value="natacion">Natación</option>
+            <option value="voley">Voley</option>
+            <option value="boxeo">Boxeo</option>
+            <option value="gimnasio">Gimnasio</option>
+            <option value="running">Running</option>
+          </select>
+        </div>
+
+        <div class="filtro-grupo">
+          <label>Precio:</label>
+          <select id="precioFiltro">
+            <option value="">Todos</option>
+            <option value="0-50">$0 - $25000</option>
+            <option value="50-100">$25000 - $50000</option>
+            <option value="100-200">$50000 - $100000</option>
+            <option value="200+">$100000+</option>
+          </select>
+        </div>
+
+        <button class="btn-filtro" onclick="aplicarFiltros()">
+          <i class="fas fa-filter"></i>
+          Aplicar Filtros
+        </button>
+      </div>
+
+      <!-- Buscador de Productos -->
+      <div class="buscador-productos">
+        <div class="buscador-container">
+          <i class="fas fa-search"></i>
+          <input type="text" id="buscadorProductos" placeholder="Buscar productos por nombre, categoría o deporte...">
+          <button class="btn-limpiar-busqueda" onclick="limpiarBusqueda()" style="display: none;">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid de Productos -->
+      <div class="productos-grid" id="productosGrid">
+        <!-- Los productos se cargarán dinámicamente -->
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- Sección de Contacto -->
+  <section class="contacto-section" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contáctanos</h2>
+        <p class="section-subtitle">Estamos aquí para ayudarte a alcanzar tus metas</p>
+      </div>
+      
+      <div class="contacto-content">
+        <div class="contacto-info">
+          <div class="contacto-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Ubicación</h4>
+              <p>Av. Deportiva 123, Ciudad Deportiva</p>
+            </div>
+          </div>
+          
+          <div class="contacto-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Teléfono</h4>
+              <p>+54 11 1234-5678</p>
+            </div>
+          </div>
+          
+          <div class="contacto-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>info@qwertysport.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contacto-form" id="contactoForm">
+          <input type="text" id="contactoNombre" placeholder="Nombre completo" required>
+          <input type="email" id="contactoEmail" placeholder="Email" required>
+          <textarea id="contactoMensaje" placeholder="Mensaje" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">
+            <i class="fas fa-paper-plane"></i>
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Moderno -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>QWERTY SPORT</h3>
+          <p>Tu pasión, nuestro deporte. Ofrecemos la mejor calidad en ropa deportiva y equipamiento para atletas de todos los niveles.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Deportes</h4>
+          <ul>
+            <li><a href="#">Fútbol</a></li>
+            <li><a href="#">Básquet</a></li>
+            <li><a href="#">Tenis</a></li>
+            <li><a href="#">Natación</a></li>
+            <li><a href="#">Voley</a></li>
+            <li><a href="#">Boxeo</a></li>
+            <li><a href="#">Gimnasio</a></li>
+            <li><a href="#">Running</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Categorías</h4>
+          <ul>
+            <li><a href="#">Remeras</a></li>
+            <li><a href="#">Pantalones</a></li>
+            <li><a href="#">Zapatillas</a></li>
+            <li><a href="#">Shorts</a></li>
+            <li><a href="#">Buzos</a></li>
+            <li><a href="#">Medias</a></li>
+            <li><a href="#">Equipamiento</a></li>
+            <li><a href="#">Accesorios</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Envíos</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 QWERTY SPORT. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Panel lateral del usuario -->
+  <div id="userPanel" class="user-panel">
+    <div class="user-header">
+      <div class="user-avatar">
+        <i class="fas fa-user"></i>
+      </div>
+      <h3 id="panelNombre">Usuario</h3>
+      <button class="close-panel" onclick="cerrarPanel()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="user-info">
+      <div class="info-item">
+        <label>Email:</label>
+        <span id="panelEmail">usuario@email.com</span>
+      </div>
+      <div class="info-item">
+        <label>Contraseña:</label>
+        <span id="panelPass">********</span>
+      </div>
+      
+      <div class="user-actions">
+        <button id="editUserBtn" class="btn-edit">
+          <i class="fas fa-edit"></i>
+          Editar Perfil
+        </button>
+        <button id="logoutBtn" class="btn-logout">
+          <i class="fas fa-sign-out-alt"></i>
+          Cerrar Sesión
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal confirmación logout -->
+  <div id="logoutModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-sign-out-alt"></i>
+        <h3>¿Cerrar Sesión?</h3>
+      </div>
+      <div style="padding: 2rem; text-align: center;">
+        <p style="margin: 0; font-size: 1.1rem; color: var(--text-primary);">¿Estás seguro de que quieres cerrar tu sesión?</p>
+      </div>
+      <div class="modal-actions">
+        <button id="confirmLogout" class="btn-primary">Cerrar</button>
+        <button onclick="cerrarModal('logoutModal')" class="btn-secondary">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-user"></i>
+        <h2>Iniciar Sesión</h2>
+      </div>
+      
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginNombre">Nombre</label>
+          <input type="text" id="loginNombre" placeholder="Tu nombre" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="tu@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Contraseña</label>
+          <div class="password-container">
+            <input type="password" id="loginPassword" placeholder="Tu contraseña" required>
+            <span id="toggleLoginPass" class="toggle-pass">👁️</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <i class="fas fa-sign-in-alt"></i>
+          Ingresar
+        </button>
+      </form>
+      
+      <div class="modal-footer">
+        <p>¿No tienes cuenta? 
+          <button id="openRegister" class="linkBtn">Regístrate aquí</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Registro -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-user-plus"></i>
+        <h2>Crear Cuenta</h2>
+      </div>
+      
+      <form id="registerForm" method="POST" action="registro.php">
+        <div class="form-group">
+          <label for="regNombre">Nombre</label>
+          <input type="text" id="regNombre" name="nombre" placeholder="Tu nombre completo" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="regEmail">Email (solo Gmail o Hotmail)</label>
+          <input type="email" id="regEmail" name="email" placeholder="ejemplo@gmail.com o ejemplo@hotmail.com" required>
+          <small class="form-help">Solo se permiten cuentas de Gmail o Hotmail/Outlook</small>
+          <div id="regEmailError" class="form-error" style="display: none;"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="regPassword">Contraseña</label>
+          <div class="password-container">
+            <input type="password" id="regPassword" name="pass" placeholder="Mín. 6 caracteres, 1 mayúscula y 1 signo" required>
+            <span id="toggleRegPass" class="toggle-pass">👁️</span>
+          </div>
+          <small class="form-help">Mínimo 6 caracteres, máximo 14. Debe incluir al menos una mayúscula y un signo especial</small>
+          <div id="regPasswordError" class="form-error" style="display: none;"></div>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <i class="fas fa-user-plus"></i>
+          Crear Cuenta
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Editar Usuario -->
+  <div id="editUserModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-edit"></i>
+        <h2>Editar Perfil</h2>
+      </div>
+      
+      <form id="editUserForm">
+        <div class="form-group">
+          <label for="editNombre">Nombre</label>
+          <input type="text" id="editNombre" placeholder="Tu nombre" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="editEmail">Email</label>
+          <input type="email" id="editEmail" placeholder="tu@email.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="editPassword">Contraseña</label>
+          <input type="password" id="editPassword" placeholder="Nueva contraseña" required>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <i class="fas fa-save"></i>
+          Guardar Cambios
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Carrito de Compras -->
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Carrito</h3>
+      <button class="close-cart" onclick="cerrarCarrito()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="cart-items" id="cartItems">
+      <!-- Los items del carrito se cargarán aquí -->
+    </div>
+    
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="btn-primary" onclick="checkout()">
+        <i class="fas fa-credit-card"></i>
+        Finalizar Compra
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal de Producto Detallado -->
+  <div id="productoModal" class="modal">
+    <!-- El contenido se cargará dinámicamente -->
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Modal de
